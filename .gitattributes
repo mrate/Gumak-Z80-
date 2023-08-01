@@ -1,2 +1,4 @@
 *.dll linguist-detectable=false
+*.asm linguist-detectable=false
+*.rom linguist-detectable=false
 *.go linguist-detectable=true
