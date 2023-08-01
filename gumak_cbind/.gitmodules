@@ -1,0 +1,6 @@
+[submodule "test/GumakTest/hqx"]
+	path = test/GumakTest/hqx
+	url = https://github.com/brunexgeek/hqx.git
+[submodule "test/GumakTest/stb"]
+	path = test/GumakTest/stb
+	url = https://github.com/nothings/stb.git

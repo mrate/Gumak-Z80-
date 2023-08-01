@@ -1,0 +1,6 @@
+*.vcxproj.user
+lib
+.vs
+test/GumakTest/GumakTest/x64
+test/GumakTest/hqXscale/x64
+test/GumakTest/x64

@@ -1,0 +1,8 @@
+github.com/TheTitanrain/w32 v0.0.0-20180517000239-4f5cfb03fabf h1:FPsprx82rdrX2jiKyS17BH6IrTmUBYqZa/CXT4uvb+I=
+github.com/TheTitanrain/w32 v0.0.0-20180517000239-4f5cfb03fabf/go.mod h1:peYoMncQljjNS6tZwI9WVyQB3qZS6u79/N3mBOcnd3I=
+github.com/sqweek/dialog v0.0.0-20220227145630-7a1c9e333fcf h1:ug6+uVJ1DgQznhPLlZGtndR/NNNadNAzhzhskHOem3Y=
+github.com/sqweek/dialog v0.0.0-20220227145630-7a1c9e333fcf/go.mod h1:/qNPSY91qTz/8TgHEMioAUc6q7+3SOybeKczHMXFcXw=
+github.com/veandco/go-sdl2 v0.4.18 h1:5ieWs2DXdJ1RjX9b8FTNZ+WJeUY9FFpGu8keD8rR3v0=
+github.com/veandco/go-sdl2 v0.4.18/go.mod h1:OROqMhHD43nT4/i9crJukyVecjPNYYuCofep6SNiAjY=
+golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 h1:OH54vjqzRWmbJ62fjuhxy7AxFFgoHN0/DPc/UrL8cAs=
+golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

@@ -1,0 +1,6 @@
+github.com/TheTitanrain/w32 v0.0.0-20180517000239-4f5cfb03fabf h1:FPsprx82rdrX2jiKyS17BH6IrTmUBYqZa/CXT4uvb+I=
+github.com/TheTitanrain/w32 v0.0.0-20180517000239-4f5cfb03fabf/go.mod h1:peYoMncQljjNS6tZwI9WVyQB3qZS6u79/N3mBOcnd3I=
+github.com/sqweek/dialog v0.0.0-20220227145630-7a1c9e333fcf h1:ug6+uVJ1DgQznhPLlZGtndR/NNNadNAzhzhskHOem3Y=
+github.com/sqweek/dialog v0.0.0-20220227145630-7a1c9e333fcf/go.mod h1:/qNPSY91qTz/8TgHEMioAUc6q7+3SOybeKczHMXFcXw=
+github.com/veandco/go-sdl2 v0.4.16 h1:q/B+5RUzjG/ZnXbbQEwrIABz8B33kq3meGxywT9/TaY=
+github.com/veandco/go-sdl2 v0.4.16/go.mod h1:OROqMhHD43nT4/i9crJukyVecjPNYYuCofep6SNiAjY=

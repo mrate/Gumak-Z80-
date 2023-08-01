@@ -1,0 +1,119 @@
+STRMS:
+    5c10
+    (272)
+
+CURCH:
+    5c51
+    (337)
+
+ERR_NR:
+    5c3a
+    (314)
+
+DATADD:
+    5C57
+
+PROG
+    5C53
+
+VARS
+    5C4B
+
+E_LINE
+    5C59
+
+REPDEL / REPPER
+    5C09
+
+;; init-chan
+L15AF:  DEFW    L09F4           ; PRINT-OUT
+        DEFW    L10A8           ; KEY-INPUT
+        DEFB    $4B             ; 'K'
+        DEFW    L09F4           ; PRINT-OUT
+        DEFW    L15C4           ; REPORT-J
+        DEFB    $53             ; 'S'
+        DEFW    L0F81           ; ADD-CHAR
+        DEFW    L15C4           ; REPORT-J
+        DEFB    $52             ; 'R'
+        DEFW    L09F4           ; PRINT-OUT
+        DEFW    L15C4           ; REPORT-J
+        DEFB    $50             ; 'P'
+
+        DEFB    $80             ; End Marker
+
+;; init-strm
+L15C6:  DEFB    $01, $00        ; stream $FD offset to channel 'K'
+        DEFB    $06, $00        ; stream $FE offset to channel 'S'
+        DEFB    $0B, $00        ; stream $FF offset to channel 'R'
+        DEFB    $01, $00        ; stream $00 offset to channel 'K'
+        DEFB    $01, $00        ; stream $01 offset to channel 'K'
+        DEFB    $06, $00        ; stream $02 offset to channel 'S'
+        DEFB    $10, $00        ; stream $03 offset to channel 'P'
+
+5c10 <= 15C6: init-strm
+    5c10    $01, $00
+    5c12    $06, $00
+    5c14    $0B, $00
+    5c16    $01, $00
+    5c18    $01, $00
+    5c1a    $06, $00
+    5c1c    $10, $00
+
+(5c4f) => 5cb6
+ 335    b6
+ 336    5c
+
+5cb6 <= 15af: init-chan
+ (438)
+    5cb6    f4
+    5cb7    09
+    
+    $09f4   = PRINT-OUT
+ ...
+
+5c51:   CURCH
+5c52:
+
+CHAN-OPEN:
+ ff - fe
+ fe - fc
+ fd - fa
+
++0x16
+
+ H: 5c
+ L: __
+
+5c10:   fd ('K' -3)
+
+; The memory.
+;
+; +---------+-----------+------------+--------------+-------------+--
+; | BASIC   |  Display  | Attributes | ZX Printer   |    System   | 
+; |  ROM    |   File    |    File    |   Buffer     |  Variables  | 
+; +---------+-----------+------------+--------------+-------------+--
+; ^         ^           ^            ^              ^             ^
+; $0000   $4000       $5800        $5B00          $5C00         $5CB6 = CHANS 
+;
+;
+;  --+----------+---+---------+-----------+---+------------+--+---+--
+;    | Channel  |$80|  BASIC  | Variables |$80| Edit Line  |NL|$80|
+;    |   Info   |   | Program |   Area    |   | or Command |  |   |
+;  --+----------+---+---------+-----------+---+------------+--+---+--
+;    ^              ^         ^               ^                   ^
+;  CHANS           PROG      VARS           E_LINE              WORKSP
+;
+;
+;                             ---5-->         <---2---  <--3---
+;  --+-------+--+------------+-------+-------+---------+-------+-+---+------+
+;    | INPUT |NL| Temporary  | Calc. | Spare | Machine | GOSUB |?|$3E| UDGs |
+;    | data  |  | Work Space | Stack |       |  Stack  | Stack | |   |      |
+;  --+-------+--+------------+-------+-------+---------+-------+-+---+------+
+;    ^                       ^       ^       ^                   ^   ^      ^
+;  WORKSP                  STKBOT  STKEND   sp               RAMTOP UDG  P_RAMT
+;                                                                         
+
+
+
+f5 - [11] 11 [0101] - push AF
+e5 - [11] 10 [0101] - push HL
