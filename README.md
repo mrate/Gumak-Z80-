@@ -1,5 +1,5 @@
 # Gumak-Z80-
-ZX Spectrum emulator writen in GO. 
+ZX Spectrum emulator written in GO. 
 
 This is my take on ZX Spectrum emulator for the occasion of ZX Spectrum 40th aniversary. I always wanted to write an emulator and I also wanted to learn new programming language so here we are :-)
 
